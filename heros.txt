@@ -1,0 +1,4 @@
+LiuBei	84	91	86	95	85
+GuanYu	95	88	95	85	80
+LuSu	70	90	85	80	85
+XiaHouDun	90	80	92	75	80
