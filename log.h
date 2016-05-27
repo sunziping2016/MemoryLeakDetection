@@ -99,12 +99,6 @@ private:
 	loglevel m_loglevel;
 };
 
-inline std::ostream& nl( std::ostream& out)
-{
-	out << "\n";
-	return out;
-}
-
 template <typename char_type,
 	typename traits = std::char_traits<char_type> >
 	std::basic_ostream<char_type, traits> &info(std::basic_ostream<char_type, traits> &out)
