@@ -7,14 +7,14 @@
 class Hero
 {
 public:
-	std::string name;
-	int strength;
-	int intelligence;
-	int power;
-	int charisma;
-	int luck;
+    std::string name;
+    int strength;
+    int intelligence;
+    int power;
+    int charisma;
+    int luck;
 
-	Hero(): name(), strength(0), intelligence(0), power(0), charisma(0), luck(0) {}
+    Hero(): name(), strength(0), intelligence(0), power(0), charisma(0), luck(0) {}
 };
 
 std::istream &operator >> (std::istream &in, Hero &hero);
