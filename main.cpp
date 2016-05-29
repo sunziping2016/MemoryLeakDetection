@@ -33,9 +33,10 @@ void test2()
 {
     cout << "Some common memory faults:" << endl;
     new int;                    // leak
-    delete[](new int);          // mismatch
-    delete(new int[1]);         // mismatch
-    delete((int *)0x563D7C);    // wild pointer (I like this color :-)
+    delete[] new int;           // mismatch
+    delete new int[2];          // mismatch
+    delete (int *)0x563D7C;     // wild pointer (I like this color :-)
+    delete (int *)nullptr;      // delete nullptr
 }
 
 int main()
@@ -62,6 +63,7 @@ int main()
     MEMORY_LEAK_DETECT_TEST(test());
     cout << "\n\nTest case #2:" << endl;
     MEMORY_LEAK_DETECT_TEST(test2());
+    cout << "All tests finished." << endl;
 
     cout.rdbuf(origcoutbuf);
     clog.rdbuf(origclogbuf);
